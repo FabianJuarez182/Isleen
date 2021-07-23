@@ -17,6 +17,8 @@ public class InstructionWorld extends World
         private void prepare (){
         //Añadiremos los titulos, botones e imagenes que utilizaremos en el mundo de instrucciones.
         addObject(new Reglas(),290, 250);
+        BotonSalida boton = new BotonSalida();
+        addObject(boton,150,350);
         drawScreen(Color.ORANGE, Color.BLACK, "Instrucciones ");
     }
         public InstructionWorld(Color bgColor, Color textColor, String message) //Obtener color de letra y texo
