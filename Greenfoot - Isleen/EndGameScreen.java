@@ -13,7 +13,7 @@ public class EndGameScreen extends World
         // Creamos el nuevo mundo con sus dimensiones en x y y.
         super(600, 400, 1); 
         drawScreen(Color.BLACK, Color.RED, "GAME OVER ");// Color de letra, y el mensaje que se quiere mostrar
-    
+        Greenfoot.stop();
     }
     public EndGameScreen(Color bgColor, Color textColor, String message) //Obtener color de letra y texo
     {    

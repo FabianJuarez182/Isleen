@@ -16,8 +16,8 @@ public class Roca extends Actor
     public Roca(int v){
         speed =v;
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/10;
-        int myNewWidth = (int)myImage.getWidth()/10;
+        int myNewHeight = (int)myImage.getHeight()/11;
+        int myNewWidth = (int)myImage.getWidth()/11;
         myImage.scale(myNewWidth,myNewHeight);
     }
     public void act()

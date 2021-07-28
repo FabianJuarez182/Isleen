@@ -26,7 +26,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         //Creamos el nuevo mundo con sus dimensiones en x y y.
-        super(600, 400, 1); 
+        super(600, 600, 1); 
         
         num_adelantamientos = 0;
         num_nivel = 4;
@@ -35,7 +35,7 @@ public class MyWorld extends World
         level = new Contador("Level: ");
         level.add(1);
         serpiente = new Isleen (velocidad_roca);
-        addObject(serpiente, 300,350);
+        addObject(serpiente, 300,550);
         addObject(level, 105,90);
         addObject(score, 105,60);
     }
@@ -66,8 +66,8 @@ public class MyWorld extends World
     
     public void aumentar_dificultad(){
         if (num_adelantamientos == num_nivel ){
-            num_adelantamientos =0;
-            num_nivel = num_nivel +2;
+            num_adelantamientos = 0;
+            num_nivel = num_nivel + 2;
             velocidad_roca++;
             level.add(1);
             serpiente.aumenta_velocidad();
@@ -81,31 +81,31 @@ public class MyWorld extends World
             int carril = getRandomNumber(0,4);
             
             if(carril == 0){
-                addObject(new Roca(velocidad_roca),160, 40);
+                addObject(new Roca(velocidad_roca),160, 10);
             }
             else if( carril == 1){
-                addObject(new Roca(velocidad_roca),270, 40);
+                addObject(new Roca(velocidad_roca),270, 10);
             }
             else if(carril==2){
-                addObject(new Roca(velocidad_roca),380, 40);
+                addObject(new Roca(velocidad_roca),380, 10);
             }
             else{
-                addObject(new Roca(velocidad_roca),490, 40);
+                addObject(new Roca(velocidad_roca),490, 10);
             }
             carril++;
             carril = carril % 4;
             
             if(carril == 0){
-                addObject(new Roca(velocidad_roca),160, 40);
+                addObject(new Roca(velocidad_roca),160, 10);
             }
             else if( carril == 1){
-                addObject(new Roca(velocidad_roca),270, 40);
+                addObject(new Roca(velocidad_roca),270, 10);
             }
             else if( carril == 2){
-                addObject(new Roca(velocidad_roca),380, 40);
+                addObject(new Roca(velocidad_roca),380, 10);
             }
             else{
-                addObject(new Roca(velocidad_roca),490, 40);
+                addObject(new Roca(velocidad_roca),490, 10);
             }
         }
         num_rivales = 2;
@@ -117,16 +117,16 @@ public class MyWorld extends World
                 int carril = getRandomNumber(0,4);
                 
                 if(carril == 0){
-                    addObject(new Hoja(velocidad_roca),160, 40);
+                    addObject(new Hoja(velocidad_roca),160, 10);
                 }
                 else if( carril == 1){
-                    addObject(new Hoja(velocidad_roca),270, 40);
+                    addObject(new Hoja(velocidad_roca),270, 10);
                 }
                 else if(carril==2){
-                    addObject(new Hoja(velocidad_roca),380, 40);
+                    addObject(new Hoja(velocidad_roca),380, 10);
                 }
                 else{
-                    addObject(new Hoja(velocidad_roca),490, 40);
+                    addObject(new Hoja(velocidad_roca),490, 10);
                 }
                 carril++;
                 carril = carril % 4;

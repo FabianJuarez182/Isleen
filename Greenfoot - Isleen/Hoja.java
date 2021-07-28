@@ -12,8 +12,8 @@ public class Hoja extends Actor
     public Hoja(int v)
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/8;
-        int myNewWidth = (int)myImage.getWidth()/8;
+        int myNewHeight = (int)myImage.getHeight()/10;
+        int myNewWidth = (int)myImage.getWidth()/10;
         myImage.scale(myNewWidth,myNewHeight);
         speed = v;
     }

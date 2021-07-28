@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
-
+    private  GreenfootSound soundtrack = new GreenfootSound("Cancion_videojuego_Isleen.wav");
     /**
      * Constructor for objects of class Menu.
      * 
@@ -32,6 +32,15 @@ public class Menu extends World
         Exit exit = new Exit();
         addObject(exit,380,350);
     }
+    
+    public void started(){
+        soundtrack.playLoop();
+    }
+    
+    public void stopped(){
+        soundtrack.stop();
+    }
+    
     public Menu(Color bgColor, Color textColor, String message) //Obtener color de letra y texo
     {    
         // Creamos el nuevo mundo con sus dimensiones en x y y.
