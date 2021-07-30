@@ -13,14 +13,14 @@ public class EndGameScreen extends World
         // Creamos el nuevo mundo con sus dimensiones en x y y.
         super(600, 400, 1); 
         drawScreen(Color.BLACK, Color.RED, "GAME OVER ");// Color de letra, y el mensaje que se quiere mostrar
-        Greenfoot.stop();
+        Greenfoot.stop(); //paramos el programa
     }
     public EndGameScreen(Color bgColor, Color textColor, String message) //Obtener color de letra y texo
     {    
         // Creamos el nuevo mundo con sus dimensiones en x y y.
         //Se ingresaran los valores a utilizar de la pantalla para ser dibujada.
         super(600, 400, 1); //Tamaño de la pantalla nuevamente para poder dibujar en ella
-        drawScreen(bgColor, textColor, message);
+        drawScreen(bgColor, textColor, message); //enviamos mensaje de titulo
     
     }   
     public void drawScreen(Color bgColor, Color textColor, String message){

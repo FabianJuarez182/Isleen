@@ -14,6 +14,7 @@ public class Roca extends Actor
      */
     private int speed;
     public Roca(int v){
+        // Se creara la imagen con sus caracteristicas y la imagen que llevara junto con la velocidad que adquirira
         speed =v;
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/11;
@@ -22,8 +23,10 @@ public class Roca extends Actor
     }
     public void act()
     {
+        //Se dira en donde poner la hoja y a que velocidad ira
         setLocation(getX(),getY()+ speed);
         if( getY() >= getWorld().getHeight()-1){
+        // Se definira como se aliminara el objeto roca y se volvera a colocar en el mundo, mientras suma 5 puntos por cada roca que esquive
         MyWorld mundo = (MyWorld) getWorld();
         mundo.removeObject(this);
         mundo.aumentar_puntuacion(5);

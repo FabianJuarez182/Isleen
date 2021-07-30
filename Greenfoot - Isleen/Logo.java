@@ -14,13 +14,10 @@ public class Logo extends Actor
      */
     public Logo()
     {
+        // Se creara la imagen con sus caracteristicas y cual foto ira designada 
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/4;
         int myNewWidth = (int)myImage.getWidth()/5;
         myImage.scale(myNewWidth,myNewHeight);
-    }
-    public void act()
-    {
-        // Add your action code here.
     }
 }

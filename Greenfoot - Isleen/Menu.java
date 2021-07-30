@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
-    private  GreenfootSound soundtrack = new GreenfootSound("Cancion_videojuego_Isleen.wav");
+    private  GreenfootSound soundtrack = new GreenfootSound("Cancion_videojuego_Isleen.wav"); // Se introduce la canción en el menú
     /**
      * Constructor for objects of class Menu.
      * 
@@ -23,7 +23,7 @@ public class Menu extends World
     }
     
     private void prepare (){
-        //Añadiremos los distintos botones y logo a utilizar en el programa.
+        //Añadiremos los distintos botones y logo a utilizar en el programa, con sus respectivas coordenadas.
         addObject(new Logo(),290, 40); 
         Play play = new Play();
         addObject(play,380,150);
@@ -34,10 +34,13 @@ public class Menu extends World
     }
     
     public void started(){
+        //Pondremos la cancion en un loop para que no termine y con un volumen de 25%
         soundtrack.playLoop();
+        soundtrack.setVolume(25);
     }
     
     public void stopped(){
+        // Servira para parar la cancion
         soundtrack.stop();
     }
     

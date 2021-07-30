@@ -10,13 +10,10 @@ public class Reglas extends Actor
 {
        public Reglas()
     {
+        // Se creara la imagen con sus caracteristicas y cual foto ira designada 
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight();
         int myNewWidth = (int)myImage.getWidth();
         myImage.scale(myNewWidth,myNewHeight);
-    }
-    public void act()
-    {
-        // Add your action code here.
     }
 }

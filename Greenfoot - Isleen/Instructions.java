@@ -9,7 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Instructions extends Botones
 {
         public Instructions(){
-       GreenfootImage myTitle = new GreenfootImage(260,60);
+        // Se creara el boton con sus caracteristicas y la frase que llevara
+        GreenfootImage myTitle = new GreenfootImage(260,60);
         Font adjustedFont = new Font(true,false, 40);
         myTitle.setFont(adjustedFont);
         myTitle.setColor(Color.BLACK);
@@ -18,6 +19,7 @@ public class Instructions extends Botones
     }
         public void act()
     {
+        //Se verificara si el mouse esta encima del boton, de ser asi ejecutara la accion de abrir el mundo de instrucciones
         checkMouse();
         checkClick(new InstructionWorld());
     }
